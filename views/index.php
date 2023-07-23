@@ -1,9 +1,23 @@
 <html>
 <head>
     <title>Main page</title>
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
-    <h3>Test</h3>
+    <header>
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="https://codechange.cc/assets/image/logo.svg" alt="logo">
+            </div>
+            <div class="header-nav">
+                <a href="">Торговая площадка</a>
+                <a href="">Игры</a>
+                <a href="">О нас</a>
+                <div class="line"></div>
+                <a href="" class="button">Авторизация</a>
+            </div>
+        </div>
+    </header>
 </body>
 
 </html>
