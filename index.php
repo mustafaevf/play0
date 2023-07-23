@@ -1,5 +1,7 @@
 <?php 
+session_start();
 ini_set('display_errors', 1);
+include "function.php";
 
 
 $url = substr($_SERVER['REQUEST_URI'], 1);
@@ -9,6 +11,8 @@ if($url == '') {
 } elseif ($url == 'login') {
     include "views/".$url.".php";
 } elseif ($url == 'register') {
+    include "views/".$url.".php";
+} elseif ($url == 'logout') {
     include "views/".$url.".php";
 }
 
@@ -32,7 +36,16 @@ function top($title) {
                             <a href="">Игры</a>
                             <a href="">О нас</a>
                             <div class="line"></div>
-                            <a href="/login" class="button">Авторизация</a>
+                            ';
+                if($_SESSION['auth'] != 1) {
+                    echo '
+                            <a href="/login" class="button">Авторизация</a>';
+                        
+                } else {
+                    echo '
+                            <a href="/user/'.$_SESSION['user_id'].'">'.getUserById($_SESSION['user_id'])['login'].'</a>';
+                }
+                echo '
                         </div>
                     </div>
                 </header>';

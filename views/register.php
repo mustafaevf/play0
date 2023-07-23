@@ -8,7 +8,7 @@
             <input type="text" id="input-login" placeholder="Логин">
         </div>
         <div class="input">
-            <input type="password" id="input-register" placeholder="Пароль">
+            <input type="password" id="input-password" placeholder="Пароль">
         </div>
         <div class="input">
             <input type="password" id="input-retry-password" placeholder="Пароль еще раз">
