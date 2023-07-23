@@ -18,6 +18,11 @@
             </div>
         </div>
     </header>
+    
+    <div class="content">
+        <p class="big-title">Обзор</p>
+
+    </div>
 </body>
 
 </html>
