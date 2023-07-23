@@ -64,6 +64,22 @@ header {
     background-color: rgba(26, 29, 42, 0.08);
     height: 22px;
 }
+button {
+    background: #1A1D2B;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+button:hover {
+    background: #2A2F43;
+}
 a.button {
     background: #1A1D2B;
     border-radius: 8px;
@@ -76,6 +92,9 @@ a.button {
     transition: 0.3s;
     display: flex;
     align-items: center;
+}
+a.grey {
+    background: #C8D1DA;
 }
 a.buttona:hover {
     background: #2A2F43;
@@ -109,4 +128,46 @@ a.buttona:hover {
     height: auto;
     display: flex;
     justify-content: center;
+    padding-bottom: 3rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    padding: 3rem 0;
+    
+}
+.form-inline {
+    display: flex;
+    gap: .3rem;
+}
+.form-inline button {
+    width: 300px;
+}
+.form-inline a {
+    width: 150px;
+}
+.input {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 1px 0.5px rgba(150, 150, 150, 0.35);
+    border-radius: 10px;
+    padding: 11px 16px;
+}
+input {
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    line-height: 120%;
+    color: #1A1D2B;
+}
+.error {
+    background: rgba(236, 45, 45, 0.12);
+    padding: 6px 8px;
+    border-radius: 5px;
+    font-size: 15.5px;
+    line-height: 135%;
+    color: #EC2D2D;
 }
