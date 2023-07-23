@@ -7,9 +7,9 @@ $url = substr($_SERVER['REQUEST_URI'], 1);
 if($url == '') {
     include "views/index.php";
 } elseif ($url == 'login') {
-    include "views/".$url;
+    include "views/".$url.".php";
 } elseif ($url == 'register') {
-    include "views/".$url;
+    include "views/".$url.".php";
 }
 
 
@@ -18,6 +18,8 @@ function top($title) {
             <head>
                 <title>'.$title.'</title>
                 <link rel="stylesheet" href="/public/css/style.css">
+                <script src="/public/js/jquery.min.js"></script>
+                <script src="/public/js/script.js"></script>
             </head>
             <body>
                 <header>
