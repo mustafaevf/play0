@@ -52,7 +52,21 @@ function createUser($login, $user_password) {
     $database = 'play0';
     $user_password = hash('sha256', htmlspecialchars($user_password));
     $connect = mysqli_connect($host, $user, $password, $database);
-    $query = "INSERT INTO users (login, password, balance) VALUES('$login', '$user_password', 0)";
+    $query = "INSERT INTO users (login, password, balance, avatar) VALUES('$login', '$user_password', 0, '/public/images/nophoto.png')";
+    $result = mysqli_query($connect, $query);
+    if($result) {
+        return 1;
+    }
+}
+
+function changePassword($user_id, $new_password) {
+    $user = 'root';
+    $password = '';
+    $host = 'localhost';
+    $database = 'play0';
+    $new_password = hash('sha256', htmlspecialchars($new_password));
+    $connect = mysqli_connect($host, $user, $password, $database);
+    $query = "UPDATE users SET password='$new_password' WHERE user_id='$user_id'";
     $result = mysqli_query($connect, $query);
     if($result) {
         return 1;

@@ -46,3 +46,27 @@ function register() {
         }
     });
 }
+function change_password() {
+    const old_password = $('#input-old-password').val();
+    const new_password = $('#input-new-password').val();
+    const data = {
+        'old_password': old_password,
+        'new_password': new_password
+    }
+    $.ajax({
+        url: '/core/user/change-password.php', 
+        type: 'POST',
+        data: data,
+        success: function(response) {
+            console.log(response)
+            if(response !== 'ok') {
+                $('.error').fadeIn();
+                $('.error').html(response)
+                
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
+        }
+    });
+}

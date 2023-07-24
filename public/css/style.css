@@ -56,8 +56,16 @@ header {
     transition: 0.3s;
     opacity: 0.75;
 }
+.header-logo img {
+    width: 100px;
+}
 .header-nav a:hover {
     opacity: 1;
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
 }
 .line {
     width: 2px;
@@ -170,4 +178,56 @@ input {
     font-size: 15.5px;
     line-height: 135%;
     color: #EC2D2D;
+}
+.profile {
+    text-align: center;
+}
+.profile .avatar {
+    margin-top: 8px;
+    margin-bottom: 9px;
+}
+.profile .subtitle {
+    margin-top: 10px;
+}
+.statistic {
+    margin: 0 20px;
+}
+.statistic-block {
+    border-radius: 14px;
+    background: #FFF;
+    margin-top: 30px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+.statistic-wrapper {
+    margin-top: 24px;
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+.statistic-info {
+    width: 49.2%;
+    border-radius: 12px;
+    background: #FAFAFA;
+    padding: 18px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+}
+p.info {
+    color: #1A1D2B;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+}
+p.text {
+    color: #1A1D2B;
+    font-size: 14.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    max-width: 120px;
+    opacity: 0.75;
 }
