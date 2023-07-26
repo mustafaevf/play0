@@ -231,3 +231,40 @@ p.text {
     max-width: 120px;
     opacity: 0.75;
 }
+
+.games {
+    margin: 5rem 20px;
+}
+.games-block {
+    border-radius: 14px;
+    background: #FFF;
+    margin-top: 30px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+.games-wrapper {
+    margin-top: 24px;
+    display: flex;
+    width: 100%;
+    gap: 12px;
+}
+.games-info {
+    
+    width: 400px;
+    border-radius: 12px;
+    background: #FAFAFA;
+    padding: 18px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+    background-position: right;
+    background-repeat: no-repeat;
+    
+}
+.games-info:hover {
+    background: #ececec;
+    transform: scale(1.01, 1.01);
+    transition: .3s;
+}

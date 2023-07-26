@@ -16,6 +16,8 @@ if(sizeof(explode('/', $url)) != 2) {
         include "views/".$url.".php";
     } elseif ($url == 'logout') {
         include "views/".$url.".php";
+    } elseif($url == 'games') {
+        include "views/games/index.php";
     }
 } else 
 {
@@ -23,6 +25,14 @@ if(sizeof(explode('/', $url)) != 2) {
     if($page[0] == 'user') {
         $user_id = $page[1];
         include "views/user/index.php";
+    }
+    if($page[0] == 'game') {
+        $game_id = $page[1];
+        $query = "SELECT * FROM games WHERE status = true AND game_id = '$game_id'";
+        $result = mysqli_query($connect, $query);
+        if(!$result) {
+            return;
+        }
     }
 }
 
@@ -45,7 +55,7 @@ function top($title) {
                         </div>
                         <div class="header-nav">
                             <a href="">Торговая площадка</a>
-                            <a href="">Игры</a>
+                            <a href="/games">Игры</a>
                             <a href="">О нас</a>
                             <div class="line"></div>
                             ';
@@ -56,7 +66,8 @@ function top($title) {
                 } else {
                     echo '
                             <a href="/user/'.$_SESSION['user_id'].'">'.getUserById($_SESSION['user_id'])['login'].'</a>
-                            <a href="/user/'.$_SESSION['user_id'].'"><img class="avatar" src="'.getUserById($_SESSION['user_id'])['avatar'].'" alt="logo"></a>';
+                            <a href="/user/'.$_SESSION['user_id'].'"><img class="avatar" src="'.getUserById($_SESSION['user_id'])['avatar'].'" alt="logo"></a>
+                            <a href="/pay/">'.getUserById($_SESSION['user_id'])['balance'].' руб.</a>';
                 }
                 echo '
                         </div>

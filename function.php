@@ -1,5 +1,9 @@
 <?php
-
+$user = 'root';
+$password = '';
+$host = 'localhost';
+$database = 'play0';
+$connect = mysqli_connect($host, $user, $password, $database);
 function getUserById($user_id) {
     $user = 'root';
     $password = '';
