@@ -51,6 +51,10 @@ function top($title) {
                 <link rel="stylesheet" href="/public/css/style.css">
                 <script src="/public/js/jquery.min.js"></script>
                 <script src="/public/js/script.js"></script>
+                <meta name="viewport" content="width=device-width,initial-scale=1" />
+                <meta content="true" name="HandheldFriendly" />
+                <meta content="width" name="MobileOptimized" />
+                <meta content="yes" name="apple-mobile-web-app-capable" />
             </head>
             <body>
                 <header>

@@ -25,6 +25,7 @@ body {
     font-weight: 400;
     font-family: 'Inter', sans-serif;
     background: #FAFAFA;
+    background-image: url('/public/images/back.svg');
     min-height: 100vh;
     user-select: text;
 }
@@ -117,7 +118,6 @@ a.buttona:hover {
     margin-top: 24px;
     font-size: 17px;
     line-height: 140%;
-    display: flex;
     align-items: center;
     color: #1A1D2B;
     opacity: 0.75;
@@ -261,10 +261,60 @@ p.text {
     cursor: pointer;
     background-position: right;
     background-repeat: no-repeat;
+
     
 }
 .games-info:hover {
-    background: #ececec;
-    transform: scale(1.01, 1.01);
+    background: #E7E7E8;
+    /* transform: scale(1.01, 1.01); */
     transition: .3s;
+}
+.block-dice {
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    gap: .3rem;
+}
+.dices {
+    display: flex;
+    gap: .3rem;
+}
+.dices img {
+    width: 150px;
+}
+.game-wrapper {
+    display: flex;
+    width: 100%;
+    height: min-content;
+    text-align: center;
+    box-shadow: 0px 0px 1px 0.5px rgba(150, 150, 150, 0.35), 0px 4px 8px 0px rgba(0, 0, 0, 0.02);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    padding: 3rem;
+}
+.left-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    padding: 4rem 3rem;
+    background: #E1E1E3;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 700px;
+}
+.right-wrapper {
+    padding: 3rem;
+    background: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

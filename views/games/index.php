@@ -13,8 +13,8 @@ require_once('function.php');
 <? top('Каталог игр') ?>
 
 <div class="games">
-    <div class="games-block">
-        <p class="small-title">Каталог игр</p>
+    <!-- <div class="games-block"> -->
+        <p class="small-title">Режимы игры</p>
         <div class="games-wrapper">
             <?php 
             $query = "SELECT * FROM games WHERE status = true";
@@ -33,7 +33,7 @@ require_once('function.php');
         
            
         </div>
-    </div>
+    <!-- </div> -->
 </div>
 
 <? bottom() ?>
