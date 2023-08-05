@@ -13,6 +13,8 @@ function login() {
             if(response !== 'ok') {
                 $('.error').fadeIn();
                 $('.error').html(response)
+            } else {
+                window.location.href = '/';
             }
         },
         error: function(jqXHR, textStatus, errorThrown) {
@@ -39,6 +41,8 @@ function register() {
                 $('.error').fadeIn();
                 $('.error').html(response)
                 // setTimeout($('.error').fadeOut(), 10000000000)
+            } else {
+                window.location.href = '/login';
             }
         },
         error: function(jqXHR, textStatus, errorThrown) {

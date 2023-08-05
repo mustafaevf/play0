@@ -76,3 +76,18 @@ function changePassword($user_id, $new_password) {
         return 1;
     }
 }
+
+function getGameById($game_id) { 
+    $user = 'root';
+    $password = '';
+    $host = 'localhost';
+    $database = 'play0';
+    $connect = mysqli_connect($host, $user, $password, $database);
+    $query = "SELECT  * FROM games WHERE game_id = '$game_id'";
+    $result = mysqli_query($connect, $query);
+    if(mysqli_num_rows($result) == 0) {
+        return 0;
+    }
+    $row = mysqli_fetch_array($result);
+    return $row;
+}

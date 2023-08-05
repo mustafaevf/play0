@@ -30,8 +30,13 @@ if(sizeof(explode('/', $url)) != 2) {
         $game_id = $page[1];
         $query = "SELECT * FROM games WHERE status = true AND game_id = '$game_id'";
         $result = mysqli_query($connect, $query);
-        if(!$result) {
+        if(mysqli_num_rows($result) == 0) {
+            echo 'error';
             return;
+        }
+        else {
+            $row = mysqli_fetch_array($result);
+            include "views/games/".$row['short'].".php";
         }
     }
 }
