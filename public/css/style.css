@@ -132,7 +132,7 @@ a.buttona:hover {
 .content {
     width: 100%;
     margin-top: 72px;
-    background-color: #fff;
+    /* background-color: #fff; */
     height: auto;
     display: flex;
     justify-content: center;
@@ -317,4 +317,27 @@ p.text {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+@media screen and (max-width: 600px) {
+    .header-nav a:nth-child(1) {
+        display: none;
+    }
+    .header-nav a:nth-child(3) {
+        display: none;
+    }
+    .header-nav a:nth-child(5) {
+        display: none;
+    }
+    .form-inline {
+        flex-direction: column;
+    }
+    .form-inline a {
+        width: 100%;
+    }
+    .games-wrapper a {
+        width: 100%;
+    }
+    .games-info {
+        width: 100%;
+    }
 }

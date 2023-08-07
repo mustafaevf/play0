@@ -12,28 +12,41 @@ require_once('function.php');
 ?>
 <? top('Каталог игр') ?>
 
-<div class="games">
-    <!-- <div class="games-block"> -->
-        <p class="small-title">Режимы игры</p>
-        <div class="games-wrapper">
-            <?php 
-            $query = "SELECT * FROM games WHERE status = true";
-            $result = mysqli_query($connect, $query);
-            if(!$result) {
-                return;
-            }
-            while($row = mysqli_fetch_array($result)) {
-                echo '  <a href="/game/'.$row['game_id'].'">
-                            <div class="games-info" style="background-image: url(/public/images/'.$row['short'].'.png);">
-                                <p class="info">'.$row['title'].'</p>
-                            </div>
-                        </a>';
-            }
-            ?>
-        
-           
-        </div>
-    <!-- </div> -->
+<div class="content">
+    <div class="profile">
+        <p class="small-title" style="margin-top: 20px;">Режимы игры</p>
+        <p class="subtitle">Все доступные игры</p>
+    </div>
+    
 </div>
+<!-- <div class="games"> -->
+    <!-- <div class="games-block"> -->
+        <div class="statistic">
+            <div class="statistic-block">
+                
+                <div class="games-wrapper">
+                    <?php 
+                    $query = "SELECT * FROM games WHERE status = true";
+                    $result = mysqli_query($connect, $query);
+                    if(!$result) {
+                        return;
+                    }
+                    while($row = mysqli_fetch_array($result)) {
+                        echo '  <a href="/game/'.$row['game_id'].'">
+                                    <div class="games-info">
+                                        <p class="info">'.$row['title'].'</p>
+                                    </div>
+                                </a>';
+                    }
+                    ?>
+                
+                
+                </div>
+            </div>
+        </div>
+        
+        
+    <!-- </div> -->
+<!-- </div> -->
 
 <? bottom() ?>
